@@ -1,4 +1,4 @@
 [submodule "GamestatsBase"]
 	path = GamestatsBase
-	url = git@github.com:mm201/GamestatsBase.git
+	url = https://github.com/mm201/GamestatsBase.git
 	branch = master
