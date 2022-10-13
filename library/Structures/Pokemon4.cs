@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using PkmnFoundations.Pokedex;
 using PkmnFoundations.Support;
+using PKHeX.Core;
 
 namespace PkmnFoundations.Structures
 {
@@ -360,7 +361,9 @@ namespace PkmnFoundations.Structures
                 if (move.MoveID > 467) return new ValidationSummary() { IsValid = false };
             }
 
-            return new ValidationSummary() { IsValid = true };
+            var isValid = new LegalityAnalysis(new PK4()).Valid; // TODO
+
+            return new ValidationSummary() { IsValid = isValid };
         }
     }
 }
